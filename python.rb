@@ -5,13 +5,13 @@ class Python < Formula
   sha256 "f434053ba1b5c8a5cc597e966ead3c5143012af827fd3f0697d21450bb8d87a6"
   revision 1
 
-  bottle do
+  head do
     sha256 "1bc5a2d3f0a8602bf2f46de7c43fcb6dde4f110c0f4518d4e802cb1f733a43de" => :high_sierra
     sha256 "131d39120ac6ca2f21bf231de7414c08916cea472bc5219e0bcb49541f77cb9f" => :sierra
     sha256 "b2584ea6f16c47fe3795745e9cae5a7762f750aa78c15cbe14736dcd2602b755" => :el_capitan
   end
 
-  head do
+  devel do
     url "https://www.python.org/ftp/python/3.7.0/Python-3.7.0rc1.tar.xz"
     sha256 "c9cfb9b60c23e3ed20e942fdeee299b27c0b4abd7def9b4a3a78d37e6c0c0bb7"
   end
@@ -29,7 +29,7 @@ class Python < Formula
   deprecated_option "with-brewed-tk" => "with-tcl-tk"
 
   depends_on "pkg-config" => :build
-  depends_on "sphinx-doc" => :build
+  depends_on "DannyKong12/formulae/sphinx-doc" => :build
   depends_on "gdbm"
   depends_on "openssl"
   depends_on "readline"
@@ -205,8 +205,7 @@ class Python < Formula
         end
       end
 
-      system "make", "html"
-      doc.install Dir["build/html/*"]
+      
     end
 
     # Install unversioned symlinks in libexec/bin.
