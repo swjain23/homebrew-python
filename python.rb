@@ -11,7 +11,7 @@ class Python < Formula
     sha256 "b2584ea6f16c47fe3795745e9cae5a7762f750aa78c15cbe14736dcd2602b755" => :el_capitan
   end
 
-  devel do
+  head do
     url "https://www.python.org/ftp/python/3.7.0/Python-3.7.0rc1.tar.xz"
     sha256 "c9cfb9b60c23e3ed20e942fdeee299b27c0b4abd7def9b4a3a78d37e6c0c0bb7"
   end
